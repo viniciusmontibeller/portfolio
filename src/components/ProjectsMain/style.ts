@@ -45,7 +45,7 @@ const ProjectCard = styled.div`
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #616161;
-    background-color: ${props => props.theme.colors.shade};
+    /* background-color: ${props => props.theme.colors.shade}; */
     box-shadow: #616161 0px 5px 15px;
     h3{
         font-size: 1.7rem;

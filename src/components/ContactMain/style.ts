@@ -66,7 +66,7 @@ const InputField = styled.div`
     span{
         color: red;
         line-height: 0;
-        transform: translateY(.7em);
+        transform: translateY(1em);
     }
 `
 

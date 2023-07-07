@@ -20,8 +20,8 @@ const ContactMain = () => {
     const form = useRef<HTMLFormElement>(null!);
 
     const sendEmail:SubmitHandler<Form> = (data) => {
-           e.preventDefault();
-            // console.log(data)
+            e.preventDefault();
+            console.log(data)
     
             emailjs
                 .sendForm(
@@ -54,8 +54,7 @@ const ContactMain = () => {
                             value: 3,
                             message: "Nesserário mínimo de 3 caracteres"
                         }
-                    }
-                    )}/>
+                    })}/>
                     {errors.user_name && <span>{errors.user_name?.message}</span>}
                 </InputField>
                 <InputField >
