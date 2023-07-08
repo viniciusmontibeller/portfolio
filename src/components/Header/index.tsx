@@ -1,9 +1,13 @@
 import { NavLink } from 'react-router-dom'
-import { Head, NavList, Container, NavContainer } from './style'
+import { useState } from 'react'
+import { Head, NavList, Container, NavContainer, MenuHamburger, Menu, Hamburger } from './style'
 import { ThemeToggler } from "../ThemeToggler"
 
 
 const Header = () => {
+    const [open, setOpen] = useState(false)
+    console.log(open)
+
     return (
         <Head>
             <Container>
@@ -12,7 +16,7 @@ const Header = () => {
             </NavLink>
             <NavContainer>
             <nav>
-                <NavList>
+                <NavList open={open}>
                     <li>
                         <NavLink to="/">
                             <h3>Sobre</h3>
@@ -39,6 +43,11 @@ const Header = () => {
                 </NavList>
             </nav>
             <ThemeToggler />
+            <MenuHamburger>
+                <Menu onClick={() => setOpen(!open)}>
+                    <Hamburger open={open}/>
+                </Menu>
+            </MenuHamburger>
             </NavContainer>
             </Container>
             

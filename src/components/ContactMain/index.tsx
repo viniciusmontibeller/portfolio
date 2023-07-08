@@ -9,7 +9,7 @@ type Form = {
     user_about: string;
     user_email: string;
     user_message: string;
-    e: React.FormEvent<HTMLFormElement>
+    // e: React.FormEvent<HTMLFormElement>
 }
 
 const ContactMain = () => {
