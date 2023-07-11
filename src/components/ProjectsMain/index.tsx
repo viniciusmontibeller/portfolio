@@ -1,9 +1,18 @@
 import pokedex from '../../assets/projects/pokedex.gif'
+import pokedexImg from '../../assets/projects/pokedex.img.png'
 import interactiveCardForm from "../../assets/projects/interactive-card-form.gif"
+import interactiveCardFormImg from "../../assets/projects/interactive-card-form.img.png"
 import fetchGithub from "../../assets/projects/fetch-github.gif"
+import fetchGithubImg from "../../assets/projects/fetch-github.img.png"
 import { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info, ProjectSkills, ProjectSource } from "./style"
+import { useState } from "react"
 
 const ProjectsMain = () => {
+
+    const [playingPokedex, setPlayingPokedex] = useState(false)
+    const [playingCardForm, setPlayingCardForm] = useState(false)
+    const [playingFetchGitHub, setPlayingFetchGitHub] = useState(false)
+
     return (
         <Main>
             <Container>
@@ -14,10 +23,13 @@ const ProjectsMain = () => {
                 </Info>
 
             <ProjectsSection>
-                <ProjectCard>
+                <ProjectCard 
+                onMouseEnter={() => setPlayingPokedex(true)}
+                onMouseLeave={() => setPlayingPokedex(false)}
+                >
                     <ImgContainer>
                         <a href="">
-                            <img src={pokedex} alt="Pokédex"/>
+                            {playingPokedex ? <img src={pokedex} alt="Projeto Pokédex"/> : <img src={pokedexImg} alt="Projeto Pokédex"/>}
                         </a>
                     </ImgContainer>
                     <ProjectInfo>
@@ -47,10 +59,13 @@ const ProjectsMain = () => {
                         </ProjectSource>
                     </ProjectInfo>
                 </ProjectCard>
-                <ProjectCard>
+                <ProjectCard
+                onMouseEnter={() => setPlayingCardForm(true)}
+                onMouseLeave={() => setPlayingCardForm(false)}
+                >
                     <ImgContainer>
                         <a href="">
-                            <img src={interactiveCardForm} alt="Formulário de cartão interativo"/>
+                            {playingCardForm ? <img src={interactiveCardForm} alt="Formulário de cartão interativo"/> : <img src={interactiveCardFormImg}/>}
                         </a>
                     </ImgContainer>
                     <ProjectInfo>
@@ -75,10 +90,13 @@ const ProjectsMain = () => {
                         </ProjectSource>
                     </ProjectInfo>
                 </ProjectCard>
-                <ProjectCard>
+                <ProjectCard
+                onMouseEnter={() => setPlayingFetchGitHub(true)}
+                onMouseLeave={() => setPlayingFetchGitHub(false)}
+                >
                     <ImgContainer>
                         <a href="">
-                            <img src={fetchGithub} alt="Buscador de usuários do GitHub"/>
+                            {playingFetchGitHub ? <img src={fetchGithub} alt="Buscador de usuários do GitHub"/>: <img src={fetchGithubImg} alt="Buscador de usuários do GitHub"/>}
                         </a>
                     </ImgContainer>
                     <ProjectInfo>
