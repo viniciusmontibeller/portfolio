@@ -36,8 +36,14 @@ const ProjectsMain = () => {
                             <span>Styled-Components</span>
                         </ProjectSkills>
                         <ProjectSource>
-                            <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/'>Site</a>
-                            <a href='https://github.com/viniciusmontibeller/pokedex'>Repositório</a>
+                            <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/'>
+                                Live Site
+                                <div></div>
+                            </a>
+                            <a href='https://github.com/viniciusmontibeller/pokedex'>
+                                Repositório
+                                <div></div>    
+                            </a>
                         </ProjectSource>
                     </ProjectInfo>
                 </ProjectCard>
@@ -58,8 +64,14 @@ const ProjectsMain = () => {
                             Projeto feito com: HTML, CSS, React, Styled-Components, React Hook Form e Zod pra validação.
                         </p>
                         <ProjectSource>
-                            <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/' >Site</a>
-                            <a href='https://github.com/viniciusmontibeller/interactive-card-details-form' >Repositório</a>
+                            <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/'>
+                                Live Site
+                                <div></div>
+                            </a>
+                            <a href='https://github.com/viniciusmontibeller/interactive-card-details-form' >
+                                Repositório
+                                <div></div>
+                            </a>
                         </ProjectSource>
                     </ProjectInfo>
                 </ProjectCard>
@@ -78,8 +90,14 @@ const ProjectsMain = () => {
                             Projeto feito com: HTML, CSS, JavaScript
                         </p>
                         <ProjectSource>
-                            <a href='https://viniciusmontibeller.github.io/projeto-inicial-fetch-github-api/' >Site</a>
-                            <a href='https://github.com/viniciusmontibeller/projeto-inicial-fetch-github-api' >Repositório</a>
+                            <a href='https://viniciusmontibeller.github.io/projeto-inicial-fetch-github-api/'>
+                                Live Site
+                                <div></div>
+                            </a>
+                            <a href='https://github.com/viniciusmontibeller/projeto-inicial-fetch-github-api' >
+                                Repositório
+                                <div></div>
+                            </a>
                         </ProjectSource>
                     </ProjectInfo>
                 </ProjectCard>

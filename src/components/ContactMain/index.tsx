@@ -2,25 +2,26 @@ import { useRef } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import emailjs from "@emailjs/browser";
 import { Button } from "../Button"
-import { Main, Container, Form, InputField } from "./style"
+import { Main, Container, Form, InputField} from "./style"
+import { AiOutlineLoading3Quarters } from "react-icons/ai"
+import { SuccessMessage } from '../SuccessMessage';
 
 type Form = {
     user_name: string;
     user_about: string;
     user_email: string;
     user_message: string;
-    // e: React.FormEvent<HTMLFormElement>
 }
 
 const ContactMain = () => {
-    const { register , handleSubmit, formState: {errors}} = useForm<Form>({
+    const { register , handleSubmit, formState: {errors, isSubmitting, isSubmitSuccessful}, reset} = useForm<Form>({
         mode: "onBlur",
     })
 
     const form = useRef<HTMLFormElement>(null!);
 
-    const sendEmail:SubmitHandler<Form> = (data) => {
-            e.preventDefault();
+    const sendEmail = (data: Object, e?: React.FormEvent<HTMLFormElement>) => {
+            e?.preventDefault();
             console.log(data)
     
             emailjs
@@ -38,14 +39,14 @@ const ContactMain = () => {
                         console.log(error.text)
                     }
                 )
-                e.currentTarget.reset()
+                reset()
         };
 
     return (
         <Main>
             <Container >
             <h1>Contato</h1>
-            <Form ref={form} onSubmit={handleSubmit(sendEmail)}>
+            <Form ref={form} onSubmit={handleSubmit(sendEmail as unknown as SubmitHandler<Form>)}>
                 <InputField >
                     <label htmlFor="nome">Nome<span>*</span></label>
                     <input id="nome" {...register("user_name", {
@@ -82,8 +83,11 @@ const ContactMain = () => {
                         />
                         {errors.user_message && <span>{errors.user_message?.message}</span>}
                 </InputField>
-                <Button>Enviar</Button>
+                <Button disabled={isSubmitting}>{isSubmitting ? <AiOutlineLoading3Quarters/> : "Enviar"}</Button>
             </Form>
+            {isSubmitSuccessful ? 
+                <SuccessMessage/>
+            : ""} 
             </Container>
         </Main>
     )

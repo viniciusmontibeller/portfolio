@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Main = styled.main`
     display: flex;
     justify-content: center;
-    margin: 6rem 1rem;
+    margin: 5rem 1rem;
 `
 
 const Container = styled.div`
@@ -37,7 +37,6 @@ const Skill = styled.li`
     width: 20rem;
     padding: 1.5em;
     background-color: ${props => props.theme.colors.background};
-    border: 2px solid transparent;
     box-shadow: #616161 0px 5px 15px;
     border-radius: 0px 50px 0px 0px;
     border: 1px solid #616161;

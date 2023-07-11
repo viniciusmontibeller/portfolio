@@ -94,17 +94,39 @@ const ProjectSkills = styled.div`
 const ProjectSource = styled.div`
     display: flex;
     gap: 2rem;
+    div{
+        transition: .5s ease-in-out;
+        position: absolute;
+        top: 0; 
+        right: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background-color: ${props => props.theme.colors.background};
+        transform: scale(.5);
+        opacity: 0;
+        z-index: -1;
+    }
     a{ 
+        transition: .5s ease-in-out;
+        position: relative;
         color: ${props => props.theme.colors.primary};
         padding: 0.5em;
         border-radius: 10px;
         transition: .3s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 2;
         :hover{
             color: ${props => props.theme.colors.background};
-            background-color: ${props => props.theme.colors.primary};
+            div{
+                opacity: 1;
+                transform: scale(1);
+                background-color: ${props => props.theme.colors.primary};
+            }
         }
     }
+    
 `
 
 export { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info,ProjectSkills, ProjectSource }

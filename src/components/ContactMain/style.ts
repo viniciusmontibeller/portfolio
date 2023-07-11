@@ -8,7 +8,6 @@ const Main = styled.main`
 
 const Container = styled.main`
     margin: 1rem;
-    
     h1{
         font-size: 3rem;
         margin-bottom: 2em;

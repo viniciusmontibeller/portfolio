@@ -3,10 +3,12 @@ import { About } from "../pages/About"
 import { Projects } from "../pages/Projects"
 import { Contact } from "../pages/Contact"
 import { Skills } from "../pages/Skills"
+import ScrollToTop from "../components/ScrollToTop"
 
 const AppRoutes = () => {
     return (
         <BrowserRouter>
+            <ScrollToTop/>
             <Routes>
                 <Route path="/" element={<About />}/>
                 <Route path="/projects" element={<Projects />}/>

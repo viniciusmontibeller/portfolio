@@ -3,6 +3,8 @@ import styled from "styled-components";
 const Main = styled.main`
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 `
 
 const Container = styled.div`
@@ -35,9 +37,34 @@ const Info = styled.div`
 `
 
 const ImgContainer = styled.div`
-    padding: 1rem;
-    background-color: lightgray;
-    border-radius: 10px;
+    position: relative;
+    
+`
+
+const FirstSquare = styled.div`
+    position: absolute;
+    top: -10rem;
+    left: -5rem;
+    right: 0;
+    height: 30rem;
+    width: 30rem;
+    border: 5px solid ${props => props.theme.colors.primary};
+    border-radius: 5px;
+    rotate: 45deg;
+    z-index: -1;
+`
+
+const SecondSquare = styled.div`
+    position: absolute;
+    top: -10rem;
+    left: -5rem;
+    right: 0;
+    height: 30rem;
+    width: 30rem;
+    border: 5px solid ${props => props.theme.colors.primary};
+    border-radius: 5px;
+    /* rotate: 15deg; */
+    z-index: -1;
 `
 
 const Cta = styled.div`
@@ -63,4 +90,4 @@ const Cta = styled.div`
     }
 `
 
-export { Main, Info, Container, ImgContainer, Cta }
+export { Main, Info, Container, ImgContainer, Cta, FirstSquare, SecondSquare }

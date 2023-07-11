@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+interface Open{
+    isOpen: boolean;
+}
+
 const Head = styled.header`
     display: flex;
     justify-content: center;
@@ -16,9 +20,6 @@ const Container = styled.div`
     }
 `
 
-const MenuHamburger = styled.div`
-    
-`
 const Menu = styled.div`
     display: none;
     width: 60px;
@@ -30,19 +31,19 @@ const Menu = styled.div`
     }
 `
 
-const Hamburger = styled.span`
-    background-color: #000;
+const Hamburger = styled.span<Open>`
+    background-color: ${props => props.theme.colors.text};
     position: relative;
     display: block;
     width: 30px;
     height: 2px;
     top: 29px;
     left: 15px;
-    transition: 0.5s ease-in-out;
-    transform: ${({ open }) => open ? "rotate(45deg)" : ""};
+    transition: transform 0.5s ease-in-out;
+    transform: ${({ isOpen }) => isOpen ? "rotate(45deg)" : ""};
     :before,
     :after{
-        background-color: #000;
+        background-color: ${props => props.theme.colors.text};
         content: "";
         display: block;
         width: 100%;
@@ -51,12 +52,12 @@ const Hamburger = styled.span`
         transition: 0.2s ease-in-out;
     }
     :before{
-        top: ${({ open }) => open ? 0 : "-10px"};
-        transform: ${({ open }) => open ? "rotate(90deg)" : ""};
+        top: ${({ isOpen }) => isOpen ? 0 : "-10px"};
+        transform: ${({ isOpen }) => isOpen ? "rotate(90deg)" : ""};
     }
     :after{
-        bottom: ${({ open }) => open ? 0 : "-10px"};
-        transform: ${({ open }) => open ? "rotate(90deg)" : ""};
+        bottom: ${({ isOpen }) => isOpen ? 0 : "-10px"};
+        transform: ${({ isOpen }) => isOpen ? "rotate(90deg)" : ""};
     }
 `
 
@@ -65,49 +66,50 @@ const NavContainer = styled.div`
     align-items: center;
     gap: 3rem;
     a, svg{
+        transition: .2s ease-in-out;
         :hover{
             color: ${props => props.theme.colors.primary};
         }
     }
-    nav{
-        @media(max-width: 950px){
-            position: absolute;
-            top: 92px;
-            right: 0px;
-            z-index: 1;
-    }
-    }
+    /* nav a.active{
+            color: ${props => props.theme.colors.primary};
+        } */
     @media(max-width: 950px){
         gap: 1rem;
     }
 `
-
-const NavList = styled.ul`
-    display: flex;
-    li{
-        padding: 1em 0em;
-        margin: 0em 1em;
-        border-bottom: 1px solid transparent;
-        transition: .2s ease-in-out;
-        :hover{
-            border-bottom: 1px solid ${props => props.theme.colors.primary};
-        }
-    }
+const Nav = styled.nav<Open>`
+    transition: .5s ease-in-out;
     @media(max-width: 950px){
-        display: ${({ open }) => open ? "block" : "none"};
-        width: 300px;
-        background-color: #fff;
+        transition: .5s linear;
+        position: absolute;
+        top: 92px;
+        right: ${({ isOpen }) => isOpen ? 0 : "-250px"};
+        z-index: 1;
+    }
+`
+
+const NavList = styled.ul<Open>`
+    display: flex;
+    transition: .5s ease-in-out;
+    @media(max-width: 950px){
+        max-width: 250px;
+        background-color: ${props => props.theme.colors.shade};
         padding: 20px;
         flex-direction: column;
         text-align: start;
+    }
+    li{
+        padding: 1em 0em;
+        margin: 0em 1em;
     }
     a{
         @media(max-width: 950px){
             text-align: center;
             padding: 20px;
             display: block;
-    }
+        }
     }
 `
 
-export { Head, NavList, Container, NavContainer, MenuHamburger, Menu, Hamburger }
+export { Head, NavList, Container, NavContainer, Menu, Hamburger, Nav }
