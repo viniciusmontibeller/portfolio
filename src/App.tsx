@@ -3,12 +3,18 @@ import { AppRoutes } from "./routes"
 import { ThemeProvider } from "styled-components"
 import { DefaultTheme } from "styled-components"
 import light from "./styles/themes/light"
-import { createContext, useState } from "react"
+import { createContext, useState, useEffect } from "react"
 
 export const ToggleContext = createContext({} as React.Dispatch<React.SetStateAction<DefaultTheme>>)
 
+const localTheme = JSON.parse(localStorage.getItem("savedTheme") || "") 
+
 function App() {
-  const [theme, setTheme] = useState(light)
+  const [theme, setTheme] = useState(localTheme || light)
+
+  useEffect(() => {
+    localStorage.setItem("savedTheme", JSON.stringify(theme))
+}, [theme])
 
   return (
     <>

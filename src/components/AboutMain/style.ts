@@ -15,6 +15,13 @@ const Container = styled.div`
     width: 100%;
     margin: 7rem 1rem 8rem;
     padding: 1rem;
+    gap: 6rem;
+    @media (max-width: 1050px){
+        flex-direction: column-reverse;
+        background-color: ${props => props.theme.colors.background};
+        border-radius: 10px;
+        padding: 2rem;
+    }
 `
 
 const Info = styled.div`
@@ -38,38 +45,45 @@ const Info = styled.div`
 
 const ImgContainer = styled.div`
     position: relative;
+    svg{
+        font-size: 3rem;
+    }
     
 `
 
 const FirstSquare = styled.div`
     position: absolute;
-    top: -10rem;
+    top: -13rem;
     left: -5rem;
     right: 0;
-    height: 30rem;
-    width: 30rem;
+    height: 60rem;
+    width: 60rem;
     border: 5px solid ${props => props.theme.colors.primary};
+    box-shadow: ${props => props.theme.colors.shadow} 0px 5px 15px;
     border-radius: 5px;
     rotate: 45deg;
     z-index: -1;
+    opacity: 0.8;
 `
 
 const SecondSquare = styled.div`
     position: absolute;
-    top: -10rem;
+    top: -12rem;
     left: -5rem;
     right: 0;
-    height: 30rem;
-    width: 30rem;
+    height: 60rem;
+    width: 60rem;
     border: 5px solid ${props => props.theme.colors.primary};
+    box-shadow: ${props => props.theme.colors.shadow} 0px 5px 15px;
     border-radius: 5px;
-    /* rotate: 15deg; */
+    rotate: 15deg;
     z-index: -1;
+    opacity: .8;
 `
 
 const Cta = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 4rem;
     a{
         background-color: ${props => props.theme.colors.primary};
@@ -87,6 +101,13 @@ const Cta = styled.div`
         :hover{
             transform: translateY(-.2rem);
         }
+    }
+    @media (max-width: 1050px){
+        justify-content: space-between;
+        gap: .5rem;
+        /* a{
+            padding: 1em 2em;
+        } */
     }
 `
 

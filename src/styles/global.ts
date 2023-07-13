@@ -17,7 +17,27 @@ const GlobalStyle = createGlobalStyle`
   body{
     font-family: 'Poppins', sans-serif;
     background-color: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text}
+    color: ${props => props.theme.colors.text};
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      margin: 3px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${props => props.theme.colors.shade};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      
+      background: ${props => props.theme.colors.text};
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
   }
 `
 

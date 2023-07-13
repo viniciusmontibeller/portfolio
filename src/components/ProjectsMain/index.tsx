@@ -28,7 +28,7 @@ const ProjectsMain = () => {
                 onMouseLeave={() => setPlayingPokedex(false)}
                 >
                     <ImgContainer>
-                        <a href="">
+                        <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/' target='_blank'>
                             {playingPokedex ? <img src={pokedex} alt="Projeto Pokédex"/> : <img src={pokedexImg} alt="Projeto Pokédex"/>}
                         </a>
                     </ImgContainer>
@@ -48,11 +48,11 @@ const ProjectsMain = () => {
                             <span>Styled-Components</span>
                         </ProjectSkills>
                         <ProjectSource>
-                            <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/'>
+                            <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/' target='_blank'>
                                 Live Site
                                 <div></div>
                             </a>
-                            <a href='https://github.com/viniciusmontibeller/pokedex'>
+                            <a href='https://github.com/viniciusmontibeller/pokedex' target='_blank'>
                                 Repositório
                                 <div></div>    
                             </a>
@@ -64,7 +64,7 @@ const ProjectsMain = () => {
                 onMouseLeave={() => setPlayingCardForm(false)}
                 >
                     <ImgContainer>
-                        <a href="">
+                        <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/' target='_blank'>
                             {playingCardForm ? <img src={interactiveCardForm} alt="Formulário de cartão interativo"/> : <img src={interactiveCardFormImg}/>}
                         </a>
                     </ImgContainer>
@@ -75,15 +75,20 @@ const ProjectsMain = () => {
                         <p>
                             Projeto realizado para validar as informações de cartão de um usuário. Possui ainda uma resposta interativa do prenchimento em tempo real para o usuário ter uma melhor experiência no formulário.
                         </p>
-                        <p>
-                            Projeto feito com: HTML, CSS, React, Styled-Components, React Hook Form e Zod pra validação.
-                        </p>
+                        <ProjectSkills>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>React</span>
+                            <span>Styled-Components</span>
+                            <span>React Hook Form</span>
+                            <span>Zod</span>
+                        </ProjectSkills>
                         <ProjectSource>
-                            <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/'>
+                            <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/' target='_blank'>
                                 Live Site
                                 <div></div>
                             </a>
-                            <a href='https://github.com/viniciusmontibeller/interactive-card-details-form' >
+                            <a href='https://github.com/viniciusmontibeller/interactive-card-details-form' target='_blank'>
                                 Repositório
                                 <div></div>
                             </a>
@@ -95,7 +100,7 @@ const ProjectsMain = () => {
                 onMouseLeave={() => setPlayingFetchGitHub(false)}
                 >
                     <ImgContainer>
-                        <a href="">
+                        <a href='https://viniciusmontibeller.github.io/ projeto-inicial-fetch-github-api/' target='_blank'>
                             {playingFetchGitHub ? <img src={fetchGithub} alt="Buscador de usuários do GitHub"/>: <img src={fetchGithubImg} alt="Buscador de usuários do GitHub"/>}
                         </a>
                     </ImgContainer>
@@ -104,15 +109,19 @@ const ProjectsMain = () => {
                             Buscador de usuários do GitHub
                         </h3>
                         <p>
-                            Nesse projéto o foco é a qualidade do consumo de um API, onde foi utilizado a API do GitHub para fazer uma busca de usuários, seus repositórios, e outras infomrações adicionais disponíveis.<br/>
-                            Projeto feito com: HTML, CSS, JavaScript
+                            Nesse projéto o foco é a qualidade do consumo de um API, onde foi utilizado a API do GitHub para fazer uma busca de usuários, seus repositórios, e outras infomrações adicionais disponíveis.
                         </p>
+                        <ProjectSkills>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </ProjectSkills>
                         <ProjectSource>
-                            <a href='https://viniciusmontibeller.github.io/projeto-inicial-fetch-github-api/'>
+                            <a href='https://viniciusmontibeller.github.io/projeto-inicial-fetch-github-api/' target='_blank'>
                                 Live Site
                                 <div></div>
                             </a>
-                            <a href='https://github.com/viniciusmontibeller/projeto-inicial-fetch-github-api' >
+                            <a href='https://github.com/viniciusmontibeller/projeto-inicial-fetch-github-api' target='_blank'>
                                 Repositório
                                 <div></div>
                             </a>

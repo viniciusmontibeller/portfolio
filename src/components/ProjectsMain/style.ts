@@ -21,7 +21,6 @@ const Info = styled.div`
     }
     p{
         font-size: 1.3rem;
-        /* margin-bottom: 3em; */
         letter-spacing: 1px;
     }
     a{
@@ -43,10 +42,10 @@ const ProjectsSection = styled.section`
 const ProjectCard = styled.div`
     display: flex;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: 1px solid #616161;
-    /* background-color: ${props => props.theme.colors.shade}; */
-    box-shadow: #616161 0px 5px 15px;
+    background-color: ${props => props.theme.colors.background};
+    box-shadow: ${props => props.theme.colors.shadow} 0px 5px 15px;
+    transition: .2s ease-in-out;
     h3{
         font-size: 1.7rem;
     }
@@ -55,10 +54,23 @@ const ProjectCard = styled.div`
     }
     :nth-child(even){
         flex-direction: row-reverse;
+        @media(max-width: 1000px){
+        flex-direction: column;
+    }
+    }
+    :hover{
+        scale: 1.03;
+        img{
+            filter: grayscale(0);
+        }
+    }
+    @media(max-width: 1000px){
+        flex-direction: column;
     }
 `
 const ImgContainer = styled.div`
-    max-height: 25rem;
+    max-height: 30rem;
+    /* flex: 1; */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -69,7 +81,9 @@ const ImgContainer = styled.div`
         line-height: 0;
     }
     img{
-        scale: .5;
+        transition: .5s ease-in-out;
+        scale: 60%;
+        filter: grayscale(70%);
     }
 `
 
@@ -78,22 +92,34 @@ const ProjectInfo = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding: 2em;
+    h3{
+        margin-bottom: .5em;
+    }
+    p{
+        margin-bottom: 1em;
+    }
+    
 `
 
 const ProjectSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-bottom: 1em;
     span{
         border-right: 1px solid ${props => props.theme.colors.primary};
         border-left: 1px solid ${props => props.theme.colors.primary};
         padding: 0em 0.5em;
     }
+    /* @media(max-width: 1000px){
+        justify-content: center;
+    } */
 `
 
 const ProjectSource = styled.div`
     display: flex;
     gap: 2rem;
+    font-size: 1.2rem;
     div{
         transition: .5s ease-in-out;
         position: absolute;
@@ -116,7 +142,6 @@ const ProjectSource = styled.div`
         padding: 0.5em;
         border-radius: 10px;
         transition: .3s ease-in-out;
-        z-index: 2;
         :hover{
             color: ${props => props.theme.colors.background};
             div{
@@ -126,6 +151,9 @@ const ProjectSource = styled.div`
             }
         }
     }
+    /* @media(max-width: 1000px){
+        justify-content: center;
+    } */
     
 `
 

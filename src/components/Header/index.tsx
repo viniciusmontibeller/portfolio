@@ -10,7 +10,8 @@ const Header = () => {
         <Head>
             <Container>
             <NavLink to="/">
-                <h1>Vinicius Montibeller</h1>
+                <h1><span>V</span>inicius <span>M</span>ontibeller</h1>
+                <p>DEV FRONTEND</p>
             </NavLink>
             <NavContainer>
             <Nav isOpen={open}>

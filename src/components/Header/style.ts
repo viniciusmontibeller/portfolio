@@ -18,6 +18,16 @@ const Container = styled.div`
     a, svg{
         color: ${props => props.theme.colors.text};
     }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        display: flex;
+        letter-spacing: 31px;
+        text-align: center;
+        border-right: 1px solid ${props => props.theme.colors.primary};
+        border-left: 1px solid ${props => props.theme.colors.primary};
+    }
 `
 
 const Menu = styled.div`
@@ -26,7 +36,7 @@ const Menu = styled.div`
     height: 60px;
     align-self: flex-end;
     cursor: pointer;
-    @media(max-width: 950px){
+    @media(max-width: 1100px){
         display: block;
     }
 `
@@ -71,17 +81,13 @@ const NavContainer = styled.div`
             color: ${props => props.theme.colors.primary};
         }
     }
-    /* nav a.active{
-            color: ${props => props.theme.colors.primary};
-        } */
-    @media(max-width: 950px){
+    @media(max-width: 1100px){
         gap: 1rem;
     }
 `
 const Nav = styled.nav<Open>`
-    transition: .5s ease-in-out;
-    @media(max-width: 950px){
-        transition: .5s linear;
+    transition: .4s ease-in-out;
+    @media(max-width: 1100px){
         position: absolute;
         top: 92px;
         right: ${({ isOpen }) => isOpen ? 0 : "-250px"};
@@ -91,20 +97,22 @@ const Nav = styled.nav<Open>`
 
 const NavList = styled.ul<Open>`
     display: flex;
-    transition: .5s ease-in-out;
-    @media(max-width: 950px){
+    @media(max-width: 1100px){
         max-width: 250px;
         background-color: ${props => props.theme.colors.shade};
+        box-shadow: #616161 0px 5px 15px;
+        border-radius: 5px;
         padding: 20px;
         flex-direction: column;
         text-align: start;
+        /* display: ${({ isOpen }) => isOpen ? "block" : "none"}; */
     }
     li{
         padding: 1em 0em;
         margin: 0em 1em;
     }
     a{
-        @media(max-width: 950px){
+        @media(max-width: 1100px){
             text-align: center;
             padding: 20px;
             display: block;

@@ -8,6 +8,10 @@ const Main = styled.main`
 
 const Container = styled.main`
     margin: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1{
         font-size: 3rem;
         margin-bottom: 2em;
@@ -16,7 +20,8 @@ const Container = styled.main`
 `
 
 const Form = styled.form`
-    width: 55rem;
+    max-width: 60rem;
+    width: 100%;
     padding: 5em;
     border-radius: 10px;
     background-color: ${props => props.theme.colors.shade};
@@ -49,6 +54,9 @@ const Form = styled.form`
             background-color: ${props => props.theme.colors.primary};
             color: ${props => props.theme.colors.background};
         }
+    }
+    @media (max-width: 600px) {
+        padding: 2.5em;
     }
 
 `

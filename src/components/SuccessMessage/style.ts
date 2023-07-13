@@ -63,7 +63,6 @@ const ToastProgress = styled.div`
     width: 100%;
     height: 4px;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: inherit;
 `
 
 const ToastProgressBar = styled.div`

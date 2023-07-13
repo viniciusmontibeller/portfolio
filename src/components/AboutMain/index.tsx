@@ -11,8 +11,10 @@ const AboutMain = () => {
             <Info>
                 <h1>Olá,</h1>
                 <p>
+                {/* &emsp;  */}
                 Sou um Desenvolvedor Web Frontend Júnior dedicado, atencioso, e um pouco perfeccionista. Sempre gostei de perceber e analizar padrões, e também de realizar coisas repetidas de diversar formas, ou seja, estou na área certa, mas além de satisfeito tenho uma constante vontade de crescer na área.
                 <br/>
+                {/* &emsp; */}
                 Como Desenvolvedor Web com foco especializado em Frontend, minhas habilidades como HTML, CSS, JavaScript, React, TypeScript, Git, Styled-Components são voltadas a transformar design estáticos em interfaces dinâmicas, e também a utiliziação de Jest e Testing Library para testes automatizados.
                 </p>
                 <Cta>
@@ -20,7 +22,7 @@ const AboutMain = () => {
                         Projetos
                     </Link>
                     <Link to="/contact">
-                        Contato
+                        Baixar CV
                     </Link>
                 </Cta>
             </Info>
@@ -28,7 +30,6 @@ const AboutMain = () => {
             <ImgContainer>
                 <FirstSquare/>
                 <SecondSquare/>
-                {/* <img src={profilePicture} /> */}
                 <div>
                     <h1>Vinicius Montibeller</h1>
                     <h2>Desenvolvedor Web Frontend</h2>
