@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
     ::-webkit-scrollbar {
       width: 6px;

@@ -34,6 +34,7 @@ const Name = styled.div`
         text-transform: uppercase;
     }
     span{
+        font-size: clamp(.5rem, 1vw + 0.3rem, 1rem);
         :nth-child(3){
             margin-right: 1.5em;
         }
@@ -49,6 +50,11 @@ const Menu = styled.div`
     cursor: pointer;
     @media(max-width: 1100px){
         display: block;
+    }
+    :hover{
+        span{
+            background-color: ${props => props.theme.colors.primary},
+        }
     }
 `
 
@@ -79,6 +85,9 @@ const Hamburger = styled.span<Open>`
     :after{
         bottom: ${({ isOpen }) => isOpen ? 0 : "-10px"};
         transform: ${({ isOpen }) => isOpen ? "rotate(90deg)" : ""};
+    }
+    @media (max-width: 700px) {
+        scale: .9;
     }
 `
 
@@ -116,7 +125,7 @@ const NavList = styled.ul<Open>`
         padding: 20px;
         flex-direction: column;
         text-align: start;
-        /* display: ${({ isOpen }) => isOpen ? "block" : "none"}; */
+        display: ${({ isOpen }) => isOpen ? "block" : "none"};
     }
     li{
         padding: 1em 0em;

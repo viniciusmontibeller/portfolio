@@ -13,12 +13,12 @@ const Header = () => {
                 <Name>
                     <h1>Vinicius Montibeller</h1>
                     <div>
-                        {/* <p> */}
+                        
                             <span>D</span>
                             <span>e</span>
                             <span>v</span>
-                        {/* </p> */}
-                        {/* <p> */}
+                        
+                        
                             <span>F</span>
                             <span>r</span>
                             <span>o</span>
@@ -27,7 +27,7 @@ const Header = () => {
                             <span>e</span>
                             <span>n</span>
                             <span>d</span>
-                        {/* </p> */}
+                       
                     </div>
                 </Name>
             </NavLink>
