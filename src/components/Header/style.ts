@@ -14,20 +14,31 @@ const Container = styled.div`
     justify-content: space-between;
     max-width: 80rem;
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem;
     a, svg{
         color: ${props => props.theme.colors.text};
     }
+`
+const Name = styled.div`
     h1{
-        font-size: 3rem;
+        font-size: clamp(1rem, 3vw + 0.5rem, 3rem);
+        line-height: 1;
     }
-    p{
-        display: flex;
-        letter-spacing: 31px;
-        text-align: center;
+    div{
         border-right: 1px solid ${props => props.theme.colors.primary};
         border-left: 1px solid ${props => props.theme.colors.primary};
+        display: flex;
+        justify-content: space-between;
+        padding: 0em .5em;
+        line-height: 1;
+        text-transform: uppercase;
     }
+    span{
+        :nth-child(3){
+            margin-right: 1.5em;
+        }
+    }
+    
 `
 
 const Menu = styled.div`
@@ -120,4 +131,4 @@ const NavList = styled.ul<Open>`
     }
 `
 
-export { Head, NavList, Container, NavContainer, Menu, Hamburger, Nav }
+export { Head, NavList, Container, NavContainer, Menu, Hamburger, Nav, Name }

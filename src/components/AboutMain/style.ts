@@ -20,7 +20,7 @@ const Container = styled.div`
         flex-direction: column-reverse;
         background-color: ${props => props.theme.colors.background};
         border-radius: 10px;
-        padding: 2rem;
+        padding: 1.5rem;
     }
 `
 
@@ -83,7 +83,6 @@ const SecondSquare = styled.div`
 
 const Cta = styled.div`
     display: flex;
-    /* flex-wrap: wrap; */
     gap: 4rem;
     a{
         background-color: ${props => props.theme.colors.primary};
@@ -93,6 +92,7 @@ const Cta = styled.div`
         border-radius: 100em;
         transition: .2s ease-in-out;
         box-shadow: #616161 0px 5px 15px;
+        text-transform: uppercase;
         :last-child{
             background-color: ${props => props.theme.colors.background};
             border: 1px solid ${props => props.theme.colors.primary};
@@ -102,12 +102,14 @@ const Cta = styled.div`
             transform: translateY(-.2rem);
         }
     }
-    @media (max-width: 1050px){
-        justify-content: space-between;
+    @media (max-width: 600px){
+        display: flex;
+        justify-content: center;
         gap: .5rem;
-        /* a{
-            padding: 1em 2em;
-        } */
+        a{
+            padding: 0.5em 1.5em;
+        }
+        /* gap: .5rem; */
     }
 `
 
