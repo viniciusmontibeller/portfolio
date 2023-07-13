@@ -85,9 +85,9 @@ const ContactMain = () => {
                 </InputField>
                 <Button disabled={isSubmitting}>{isSubmitting ? <AiOutlineLoading3Quarters/> : "Enviar"}</Button>
             </Form>
-            {isSubmitSuccessful ? 
+            {/* {isSubmitSuccessful ?  */}
                 <SuccessMessage/>
-            : ""} 
+            {/* : ""}  */}
             </Container>
         </Main>
     )

@@ -3,11 +3,14 @@ import styled from "styled-components";
 const Main = styled.main`
     display: flex;
     justify-content: center;
-    margin: 5rem 1rem;
+    margin: 5rem 0rem;
+    @media (min-width: 550px) {
+        margin: 5rem 1rem;
+    }
 `
 
 const Container = styled.main`
-    margin: 1rem;
+    margin: 1rem 0rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,6 +19,9 @@ const Container = styled.main`
         font-size: 3rem;
         margin-bottom: 2em;
         text-align: center;
+    }
+    @media (min-width: 550px) {
+        margin: 1rem;
     }
 `
 
