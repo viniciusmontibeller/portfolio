@@ -7,9 +7,18 @@ import { createContext, useState, useEffect } from "react"
 
 export const ToggleContext = createContext({} as React.Dispatch<React.SetStateAction<DefaultTheme>>)
 
+
+// const localTheme = JSON.parse(localStorage.getItem("savedTheme") || "")
 function App() {
-  const localTheme = JSON.parse(localStorage.getItem("savedTheme") || "") || light
-  const [theme, setTheme] = useState(localTheme)
+  const [theme, setTheme] = useState<DefaultTheme>(() => {
+    const storageValue = localStorage.getItem("savedTheme")
+
+    if(storageValue) {
+      return JSON.parse(storageValue)
+    }else{
+      return light;
+    }
+  });
 
   useEffect(() => {
     localStorage.setItem("savedTheme", JSON.stringify(theme))
