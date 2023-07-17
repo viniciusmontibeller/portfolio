@@ -33,6 +33,14 @@ const Info = styled.div`
             border-bottom: 1px solid ${props => props.theme.colors.primary};
         }
     }
+    @media(max-width: 700px){
+        h1{
+            font-size: 2.3rem;
+        }
+        p{
+            font-size: 1.15rem;
+        }
+    }
 `
 
 const ProjectsSection = styled.section`
@@ -95,7 +103,6 @@ const ProjectCard = styled.div`
 `
 const ImgContainer = styled.div`
     max-height: 30rem;
-    /* flex: 1; */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -109,6 +116,12 @@ const ImgContainer = styled.div`
         transition: .5s ease-in-out;
         scale: 60%;
         filter: grayscale(70%);
+        @media(max-width: 700px){
+        scale: 35%;
+    }
+    }
+    @media(max-width: 700px){
+        max-height: 20rem;
     }
 `
 
@@ -123,6 +136,14 @@ const ProjectInfo = styled.div`
     p{
         margin-bottom: 1em;
     }
+    @media(max-width: 700px){
+        h3{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
     
 `
 
@@ -136,9 +157,9 @@ const ProjectSkills = styled.div`
         border-left: 1px solid ${props => props.theme.colors.primary};
         padding: 0em 0.5em;
     }
-    /* @media(max-width: 1000px){
-        justify-content: center;
-    } */
+    @media(max-width: 700px){
+        font-size: .85rem;
+    }
 `
 
 const ProjectSource = styled.div`
@@ -176,9 +197,9 @@ const ProjectSource = styled.div`
             }
         }
     }
-    /* @media(max-width: 1000px){
-        justify-content: center;
-    } */
+    @media(max-width: 700px){
+        font-size: 1.1rem;
+    }
     
 `
 export { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info,ProjectSkills, ProjectSource }
