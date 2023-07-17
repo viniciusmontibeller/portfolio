@@ -21,7 +21,7 @@ const Container = styled.div`
 `
 const Name = styled.div`
     h1{
-        font-size: clamp(1rem, 3vw + 0.5rem, 3rem);
+        font-size: clamp(1rem, 3vw + 0.6rem, 3rem);
         line-height: 1;
     }
     div{
@@ -39,7 +39,6 @@ const Name = styled.div`
             margin-right: 1.5em;
         }
     }
-    
 `
 
 const Menu = styled.div`
@@ -87,7 +86,7 @@ const Hamburger = styled.span<Open>`
         transform: ${({ isOpen }) => isOpen ? "rotate(90deg)" : ""};
     }
     @media (max-width: 700px) {
-        scale: .9;
+        scale: .8;
     }
 `
 
@@ -137,7 +136,32 @@ const NavList = styled.ul<Open>`
             padding: 20px;
             display: block;
         }
+        h3{
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
     }
 `
+
+// const slideIn = keyframes`
+//     0%{
+//         opacity: 0;
+//         transform: translateX(100%);
+//     }
+//     100%{
+//         opacity: 1;
+//         transform: translateX(0%);
+//     }
+// `
+// const slideOut = keyframes`
+//     0%{
+//         opacity: 1;
+//         transform: translateX(0%);
+//     }
+//     100%{
+//         opacity: 0;
+//         transform: translateX(100%);
+//     }
+// `
 
 export { Head, NavList, Container, NavContainer, Menu, Hamburger, Nav, Name }

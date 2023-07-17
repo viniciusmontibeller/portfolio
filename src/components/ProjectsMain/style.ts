@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+
+
 const Main = styled.main`
     display: flex;
     justify-content: center;
@@ -37,6 +39,30 @@ const ProjectsSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 6rem;
+    .hidden{
+        opacity: 0;
+        filter: blur(5px);
+        transition: all 1s;
+        :nth-child(odd){
+            transform: translateX(-100%);
+        }
+        :nth-child(even){
+            transform: translateX(100%)
+        }
+    }
+    .show{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        :nth-child(even), :nth-child(odd){
+            transform: translateX(0);
+        }
+    }
+    @media(prefers-reduced-motion){
+        .hidden{
+            transition: none;
+        }
+    }
 `
 
 const ProjectCard = styled.div`
@@ -45,7 +71,6 @@ const ProjectCard = styled.div`
     border: 1px solid #616161;
     background-color: ${props => props.theme.colors.background};
     box-shadow: ${props => props.theme.colors.shadow} 0px 5px 15px;
-    transition: .2s ease-in-out;
     h3{
         font-size: 1.7rem;
     }
@@ -59,7 +84,6 @@ const ProjectCard = styled.div`
     }
     }
     :hover{
-        scale: 1.03;
         img{
             filter: grayscale(0);
         }
@@ -67,6 +91,7 @@ const ProjectCard = styled.div`
     @media(max-width: 1000px){
         flex-direction: column;
     }
+    
 `
 const ImgContainer = styled.div`
     max-height: 30rem;
@@ -156,5 +181,4 @@ const ProjectSource = styled.div`
     } */
     
 `
-
 export { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info,ProjectSkills, ProjectSource }

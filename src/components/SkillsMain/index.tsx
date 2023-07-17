@@ -1,8 +1,24 @@
 import { BiLogoHtml5, BiLogoCss3, BiLogoJavascript, BiLogoReact, BiLogoTypescript } from "react-icons/bi"
 import { SiStyledcomponents, SiJest } from "react-icons/si"
 import { Main, Container, SkillsList, Skill, Intro } from "./style"
+import { useRef, useEffect } from "react"
 
 const SkillsMain = () => {
+
+    const ref = useRef<HTMLUListElement | null>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target)
+                }
+            })
+        })
+        ref.current?.querySelectorAll("li").forEach((card) => observer.observe(card))
+    }, [])
+    
     return (
         <Main>
             <Container>
@@ -13,7 +29,7 @@ const SkillsMain = () => {
                 </Intro>
 
             <section>
-                <SkillsList>
+                <SkillsList ref={ref}>
                     <Skill>
                         <BiLogoHtml5  />
                         <h3>HTML</h3>

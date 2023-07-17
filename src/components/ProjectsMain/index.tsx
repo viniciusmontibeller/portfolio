@@ -5,13 +5,27 @@ import interactiveCardFormImg from "../../assets/projects/interactive-card-form.
 import fetchGithub from "../../assets/projects/fetch-github.gif"
 import fetchGithubImg from "../../assets/projects/fetch-github.img.png"
 import { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info, ProjectSkills, ProjectSource } from "./style"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
 const ProjectsMain = () => {
 
     const [playingPokedex, setPlayingPokedex] = useState(false)
     const [playingCardForm, setPlayingCardForm] = useState(false)
     const [playingFetchGitHub, setPlayingFetchGitHub] = useState(false)
+
+    const ref = useRef<HTMLElement | null>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target)
+                }
+            })
+        })
+        ref.current?.querySelectorAll(".hidden").forEach((card) => observer.observe(card))
+    }, [])
 
     return (
         <Main>
@@ -22,8 +36,9 @@ const ProjectsMain = () => {
                     </p>
                 </Info>
 
-            <ProjectsSection>
-                <ProjectCard 
+            <ProjectsSection ref={ref} >
+                <ProjectCard
+                className="hidden"
                 onMouseEnter={() => setPlayingPokedex(true)}
                 onMouseLeave={() => setPlayingPokedex(false)}
                 >
@@ -60,6 +75,7 @@ const ProjectsMain = () => {
                     </ProjectInfo>
                 </ProjectCard>
                 <ProjectCard
+                className="hidden"
                 onMouseEnter={() => setPlayingCardForm(true)}
                 onMouseLeave={() => setPlayingCardForm(false)}
                 >
@@ -96,6 +112,7 @@ const ProjectsMain = () => {
                     </ProjectInfo>
                 </ProjectCard>
                 <ProjectCard
+                className="hidden"
                 onMouseEnter={() => setPlayingFetchGitHub(true)}
                 onMouseLeave={() => setPlayingFetchGitHub(false)}
                 >
@@ -133,7 +150,5 @@ const ProjectsMain = () => {
         </Main>
     )
 }
-
-
 
 export { ProjectsMain }

@@ -31,6 +31,25 @@ const SkillsList = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     gap: 4em;
+    .show{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+        @media(min-width: 800px){
+            :nth-child(2){
+                transition-delay: 100ms;
+            }
+            :nth-child(3){
+                transition-delay: 200ms;
+            }
+            :nth-child(5){
+                transition-delay: 100ms;
+            }
+            :nth-child(6){
+                transition-delay: 200ms;
+            }
+        }
+    }
 `
 
 const Skill = styled.li`
@@ -41,7 +60,6 @@ const Skill = styled.li`
     border-radius: 0px 50px 0px 0px;
     border: 1px solid #616161;
     svg{
-        /* height: 64px; */
         font-size: 4em;
         color: ${props => props.theme.colors.primary};
         margin-bottom: .1em;
@@ -50,9 +68,13 @@ const Skill = styled.li`
         font-size: 1.4rem;
         margin-bottom: .5em;
     }
-    /* p{
-        letter-spacing: 2px;
-    } */
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateY(100%);
+    @media(prefers-reduced-motion){
+        transition: none;
+    }
 `
 
 export { Main, Container, SkillsList, Skill, Intro }

@@ -12,14 +12,13 @@ const SuccessMsg = styled.div<Closed>`
     margin-top: 1.5em;
     position: fixed;
     top: 20px;
-    right: 10px;
+    right: 0px;
+    margin: 0em 1em;
     padding: 1em;
     border-radius: 10px;
-    background-color: ${props => props.theme.colors.background};
     box-shadow: #616161 0px 5px 15px;
     border: 1px solid #616161;
     background-color: ${props => props.theme.colors.shade};
-    overflow: hidden;
     animation: ${({ isClosed }) => isClosed ? "slide-out" : "slide-in"} 0.4s ease-in-out forwards;
     svg{
         font-size: 1.5rem;
