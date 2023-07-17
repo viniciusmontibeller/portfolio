@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Main = styled.main`
     display: flex;
     justify-content: center;
-    position: relative;
     overflow: hidden;
 `
 
@@ -14,20 +13,21 @@ const Container = styled.div`
     max-width: 80rem;
     width: 100%;
     margin: 7rem 1rem 8rem;
-    padding: 1rem;
-    gap: 6rem;
+    border-radius: 10px;
     @media (max-width: 1050px){
         flex-direction: column-reverse;
         background-color: ${props => props.theme.colors.background};
-        border-radius: 10px;
-        padding: 1.5rem;
+        gap: 3rem;
     }
 `
 
-const Info = styled.div`
+const Info = styled.section`
     max-width: 35rem;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    background-color: ${props => props.theme.colors.background};
+    padding: 1rem;
     h1{
         font-size: 5rem;
         margin-bottom: 0.2em;
@@ -41,14 +41,45 @@ const Info = styled.div`
         font-size: 1.3rem;
         margin-bottom: 2.5em;
     }
+    @media(max-width: 700px){
+        p{
+            font-size: 1.15rem;
+        }
+    }
 `
 
-const ImgContainer = styled.div`
+const Presentation = styled.section`
+    display: flex;
     position: relative;
+    justify-content: center;
+    @media(max-width: 1050px){
+        width: 100%;
+        padding: 3rem 0rem;
+        padding: 2em 1em;
+    }
     svg{
         font-size: 3rem;
     }
-    
+`
+
+const About = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    div{
+        padding-bottom: 2rem;
+        border-bottom: 1px solid ${props => props.theme.colors.primary};
+    }
+    h1{
+        font-size: 1.85rem;
+    }
+    h3{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
 `
 
 const FirstSquare = styled.div`
@@ -88,7 +119,8 @@ const Cta = styled.div`
         background-color: ${props => props.theme.colors.primary};
         color: ${props => props.theme.colors.background};
         border: 1px solid transparent;
-        padding: 1em 4em;
+        padding-block: clamp(.5em, 1vh + .5em, 1em);
+        padding-inline: clamp(1.5em, 4vw + 1em, 4em);
         border-radius: 100em;
         transition: .2s ease-in-out;
         box-shadow: #616161 0px 5px 15px;
@@ -106,11 +138,10 @@ const Cta = styled.div`
         display: flex;
         justify-content: center;
         gap: .5rem;
-        a{
-            padding: 0.5em 1.5em;
-        }
-        /* gap: .5rem; */
+    }
+    @media (max-width: 375px){
+        font-size: .8rem;
     }
 `
 
-export { Main, Info, Container, ImgContainer, Cta, FirstSquare, SecondSquare }
+export { Main, Info, Container, Presentation, Cta, FirstSquare, SecondSquare, About }

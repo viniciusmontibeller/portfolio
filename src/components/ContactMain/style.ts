@@ -26,7 +26,7 @@ const Container = styled.main`
 `
 
 const Form = styled.form`
-    max-width: 60rem;
+    max-width: 55rem;
     width: 100%;
     padding: 5em;
     border-radius: 10px;

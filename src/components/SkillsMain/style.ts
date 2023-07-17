@@ -23,14 +23,21 @@ const Intro = styled.div`
         font-size: 1.3rem;
         letter-spacing: 1px;
     }
-
+    @media(max-width: 700px){
+        h1{
+            font-size: 2.3rem;
+        }
+        p{
+            font-size: 1.15rem;
+        }
+    }
 `
 
 const SkillsList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4em;
+    gap: 5em;
     .show{
         opacity: 1;
         filter: blur(0);

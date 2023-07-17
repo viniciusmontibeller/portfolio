@@ -12,6 +12,7 @@ const Container = styled.footer`
     max-width: 80rem;
     width: 100%;
     padding: 1rem;
+    margin: 1rem;
 `
 
 const Copyright = styled.div`

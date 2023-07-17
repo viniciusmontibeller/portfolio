@@ -12,6 +12,7 @@ const Container = styled.div`
     max-width: 80rem;
     width: 100%;
     padding: 1rem;
+    
 `
 
 const Info = styled.div`
@@ -119,6 +120,7 @@ const ImgContainer = styled.div`
         @media(max-width: 700px){
         scale: 35%;
     }
+    
     }
     @media(max-width: 700px){
         max-height: 20rem;

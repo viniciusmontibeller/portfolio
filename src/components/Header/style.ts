@@ -14,7 +14,8 @@ const Container = styled.div`
     justify-content: space-between;
     max-width: 80rem;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
     a, svg{
         color: ${props => props.theme.colors.text};
     }
@@ -101,7 +102,10 @@ const NavContainer = styled.div`
         }
     }
     @media(max-width: 1100px){
-        gap: 1rem;
+        gap: .5rem;
+    }
+    @media(max-width: 375px){
+        gap: 0;
     }
 `
 const Nav = styled.nav<Open>`
