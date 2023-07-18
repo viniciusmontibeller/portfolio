@@ -44,17 +44,16 @@ const Name = styled.div`
 
 const Menu = styled.div`
     display: none;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     align-self: flex-end;
     cursor: pointer;
+    transition: .4s ease-in-out;
     @media(max-width: 1100px){
         display: block;
     }
-    :hover{
-        span{
-            background-color: ${props => props.theme.colors.primary},
-        }
+    :hover, :focus{
+        filter: drop-shadow(0 0 2px ${props => props.theme.colors.primary});
     }
 `
 
@@ -64,8 +63,8 @@ const Hamburger = styled.span<Open>`
     display: block;
     width: 30px;
     height: 2px;
-    top: 29px;
-    left: 15px;
+    top: 15px;
+    left: 0;
     transition: transform 0.5s ease-in-out;
     transform: ${({ isOpen }) => isOpen ? "rotate(45deg)" : ""};
     :before,
@@ -94,19 +93,17 @@ const Hamburger = styled.span<Open>`
 const NavContainer = styled.div`
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: clamp(.5rem, 2vw + .1rem, 3rem);
     a, svg{
         transition: .2s ease-in-out;
-        :hover{
+        :hover, :focus{
             color: ${props => props.theme.colors.primary};
         }
     }
     @media(max-width: 1100px){
-        gap: .5rem;
+        gap: 1rem;
     }
-    @media(max-width: 375px){
-        gap: 0;
-    }
+    
 `
 const Nav = styled.nav<Open>`
     transition: .4s ease-in-out;
@@ -146,26 +143,5 @@ const NavList = styled.ul<Open>`
         }
     }
 `
-
-// const slideIn = keyframes`
-//     0%{
-//         opacity: 0;
-//         transform: translateX(100%);
-//     }
-//     100%{
-//         opacity: 1;
-//         transform: translateX(0%);
-//     }
-// `
-// const slideOut = keyframes`
-//     0%{
-//         opacity: 1;
-//         transform: translateX(0%);
-//     }
-//     100%{
-//         opacity: 0;
-//         transform: translateX(100%);
-//     }
-// `
 
 export { Head, NavList, Container, NavContainer, Menu, Hamburger, Nav, Name }

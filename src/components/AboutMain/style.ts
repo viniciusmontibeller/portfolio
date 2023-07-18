@@ -73,12 +73,19 @@ const About = styled.div`
     }
     h1{
         font-size: 1.85rem;
+        text-align: center;
+        @media(max-width: 375px){
+        font-size: 1.5rem;
+        }
     }
     h3{
         text-align: center;
         font-size: 1.1rem;
         font-weight: 300;
         letter-spacing: 1px;
+        @media(max-width: 375px){
+        font-size: 1rem;
+        }
     }
 `
 
@@ -130,7 +137,7 @@ const Cta = styled.div`
             border: 1px solid ${props => props.theme.colors.primary};
             color: ${props => props.theme.colors.primary};
         }
-        :hover{
+        :hover, :focus{
             transform: translateY(-.2rem);
         }
     }

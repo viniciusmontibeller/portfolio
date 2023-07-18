@@ -30,7 +30,7 @@ const Info = styled.div`
         color: ${props => props.theme.colors.primary};
         border-bottom: 1px solid transparent;
         transition: .2s ease-in;
-        :hover{
+        :hover, :focus{
             border-bottom: 1px solid ${props => props.theme.colors.primary};
         }
     }
@@ -92,7 +92,7 @@ const ProjectCard = styled.div`
         flex-direction: column;
     }
     }
-    :hover{
+    :hover, :focus{
         img{
             filter: grayscale(0);
         }
@@ -103,7 +103,7 @@ const ProjectCard = styled.div`
     
 `
 const ImgContainer = styled.div`
-    max-height: 30rem;
+    max-height: 31rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -136,7 +136,7 @@ const ProjectInfo = styled.div`
         margin-bottom: .5em;
     }
     p{
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
     @media(max-width: 700px){
         h3{
@@ -146,14 +146,13 @@ const ProjectInfo = styled.div`
             font-size: 1rem;
         }
     }
-    
 `
 
 const ProjectSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     span{
         border-right: 1px solid ${props => props.theme.colors.primary};
         border-left: 1px solid ${props => props.theme.colors.primary};
@@ -190,7 +189,8 @@ const ProjectSource = styled.div`
         padding: 0.5em;
         border-radius: 10px;
         transition: .3s ease-in-out;
-        :hover{
+        border: 1px solid ${props => props.theme.colors.primary};
+        :hover, :focus{
             color: ${props => props.theme.colors.background};
             div{
                 opacity: 1;

@@ -31,6 +31,15 @@ const Form = styled.form`
     padding: 5em;
     border-radius: 10px;
     background-color: ${props => props.theme.colors.shade};
+    animation: fade-in 1s ease-in-out forwards;
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
     label{
         font-size: 1.3rem;
     }
@@ -56,7 +65,7 @@ const Form = styled.form`
         border: 1px solid ${props => props.theme.colors.primary};
         padding: .5em 2em;
         transition: .2s ease-in-out;
-        :hover{
+        :hover, :focus{
             background-color: ${props => props.theme.colors.primary};
             color: ${props => props.theme.colors.background};
         }

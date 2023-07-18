@@ -9,7 +9,7 @@ const SocialList = styled.ul`
     a{
         position: relative;
         z-index: 2;
-        :hover{
+        :hover, :focus{
             div{
                 transform: scale(1.25);
                 opacity: 1;
@@ -32,13 +32,10 @@ const SocialList = styled.ul`
     }
     svg{
         display: block;
-        /* border-bottom: 1px solid transparent; */
-        /* padding-bottom: .1em; */
         transition: .3s ease-in-out;
         color: ${props => props.theme.colors.text};
         z-index: 2;
-        :hover{
-            /* border-bottom: 1px solid ${props => props.theme.colors.primary}; */
+        :hover, :focus{
             color: ${props => props.theme.colors.background}
         }
     }
