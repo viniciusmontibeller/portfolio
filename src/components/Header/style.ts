@@ -36,7 +36,7 @@ const Name = styled.div`
     }
     span{
         font-family: 'Ysabeau Office', sans-serif;
-        font-weight: 100;
+        font-weight: 200;
         font-size: clamp(.5rem, 1vw + 0.3rem, 1rem);
         :nth-child(3){
             margin-right: 1.5em;
@@ -113,7 +113,7 @@ const Nav = styled.nav<Open>`
         position: absolute;
         top: 92px;
         right: ${({ isOpen }) => isOpen ? 0 : "-250px"};
-        z-index: 1;
+        z-index: 3;
     }
 `
 
