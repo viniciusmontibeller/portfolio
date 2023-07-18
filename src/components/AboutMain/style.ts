@@ -12,7 +12,7 @@ const Container = styled.div`
     align-items: center;
     max-width: 80rem;
     width: 100%;
-    margin: 7rem 1rem 8rem;
+    margin: 6rem 1rem 8rem;
     border-radius: 10px;
     @media (max-width: 1050px){
         flex-direction: column-reverse;
@@ -32,11 +32,6 @@ const Info = styled.section`
         font-size: 5rem;
         margin-bottom: 0.2em;
     }
-    h2{
-        font-size: 2rem;
-        font-weight: 300;
-        margin-bottom: 2em;
-    }
     p{
         font-size: 1.3rem;
         margin-bottom: 2.5em;
@@ -52,13 +47,13 @@ const Presentation = styled.section`
     display: flex;
     position: relative;
     justify-content: center;
+    svg{
+        font-size: 3rem;
+    }
     @media(max-width: 1050px){
         width: 100%;
         padding: 3rem 0rem;
         padding: 2em 1em;
-    }
-    svg{
-        font-size: 3rem;
     }
 `
 
@@ -72,7 +67,9 @@ const About = styled.div`
         border-bottom: 1px solid ${props => props.theme.colors.primary};
     }
     h1{
-        font-size: 1.85rem;
+        font-family: 'Ysabeau Office', sans-serif;
+        letter-spacing: 1px;
+        font-size: 2rem;
         text-align: center;
         @media(max-width: 375px){
         font-size: 1.5rem;
@@ -83,6 +80,9 @@ const About = styled.div`
         font-size: 1.1rem;
         font-weight: 300;
         letter-spacing: 1px;
+        @media(max-width: 1050px){
+            color: ${props => props.theme.colors.primary};
+        }
         @media(max-width: 375px){
         font-size: 1rem;
         }
@@ -122,6 +122,8 @@ const SecondSquare = styled.div`
 const Cta = styled.div`
     display: flex;
     gap: 4rem;
+    font-family: 'Ysabeau Office', sans-serif;
+    font-weight: 700;
     a{
         background-color: ${props => props.theme.colors.primary};
         color: ${props => props.theme.colors.background};

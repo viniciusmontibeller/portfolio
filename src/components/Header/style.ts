@@ -35,6 +35,8 @@ const Name = styled.div`
         text-transform: uppercase;
     }
     span{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-weight: 100;
         font-size: clamp(.5rem, 1vw + 0.3rem, 1rem);
         :nth-child(3){
             margin-right: 1.5em;

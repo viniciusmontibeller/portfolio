@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-
-
 const Main = styled.main`
     display: flex;
     justify-content: center;
@@ -80,12 +78,6 @@ const ProjectCard = styled.div`
     border: 1px solid #616161;
     background-color: ${props => props.theme.colors.background};
     box-shadow: ${props => props.theme.colors.shadow} 0px 5px 15px;
-    h3{
-        font-size: 1.7rem;
-    }
-    p{
-        font-size: 1.3rem;
-    }
     :nth-child(even){
         flex-direction: row-reverse;
         @media(max-width: 1000px){
@@ -103,7 +95,7 @@ const ProjectCard = styled.div`
     
 `
 const ImgContainer = styled.div`
-    max-height: 31rem;
+    max-height: 32rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -120,10 +112,9 @@ const ImgContainer = styled.div`
         @media(max-width: 700px){
         scale: 35%;
     }
-    
     }
     @media(max-width: 700px){
-        max-height: 20rem;
+        max-height: 15rem;
     }
 `
 
@@ -133,17 +124,21 @@ const ProjectInfo = styled.div`
     justify-content: space-between;
     padding: 2em;
     h3{
+        font-family: 'Ysabeau Office', sans-serif;
+        font-size: 2.5rem;
         margin-bottom: .5em;
     }
     p{
+        font-size: 1.2rem;
         margin-bottom: 1.5em;
+        font-weight: 300;
     }
     @media(max-width: 700px){
         h3{
             font-size: 1.5rem;
         }
         p{
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
     }
 `
@@ -153,20 +148,22 @@ const ProjectSkills = styled.div`
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2em;
+    font-weight: 100;
     span{
         border-right: 1px solid ${props => props.theme.colors.primary};
         border-left: 1px solid ${props => props.theme.colors.primary};
         padding: 0em 0.5em;
     }
     @media(max-width: 700px){
-        font-size: .85rem;
+        font-size: .8rem;
     }
 `
 
 const ProjectSource = styled.div`
     display: flex;
     gap: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-family: 'Ysabeau Office', sans-serif;
     div{
         transition: .5s ease-in-out;
         position: absolute;

@@ -65,6 +65,8 @@ const Form = styled.form`
         border: 1px solid ${props => props.theme.colors.primary};
         padding: .5em 2em;
         transition: .2s ease-in-out;
+        font-family: 'Prompt', sans-serif;
+        letter-spacing: 1px;
         :hover, :focus{
             background-color: ${props => props.theme.colors.primary};
             color: ${props => props.theme.colors.background};

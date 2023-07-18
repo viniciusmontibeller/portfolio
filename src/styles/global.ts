@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Prompt', sans-serif;
     background-color: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     overflow-x: hidden;

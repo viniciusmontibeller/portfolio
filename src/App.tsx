@@ -2,7 +2,7 @@ import { GlobalStyle } from "./styles/global"
 import { AppRoutes } from "./routes"
 import { ThemeProvider } from "styled-components"
 import { DefaultTheme } from "styled-components"
-import light from "./styles/themes/light"
+import dark from "./styles/themes/dark"
 import { createContext, useState, useEffect } from "react"
 
 export const ToggleContext = createContext({} as React.Dispatch<React.SetStateAction<DefaultTheme>>)
@@ -16,7 +16,7 @@ function App() {
     if(storageValue) {
       return JSON.parse(storageValue)
     }else{
-      return light;
+      return dark;
     }
   });
 
