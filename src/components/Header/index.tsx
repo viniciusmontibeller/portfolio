@@ -13,12 +13,9 @@ const Header = () => {
                 <Name>
                     <h1>Vinicius Montibeller</h1>
                     <div>
-                        
                             <span>D</span>
                             <span>e</span>
                             <span>v</span>
-                        
-                        
                             <span>F</span>
                             <span>r</span>
                             <span>o</span>
