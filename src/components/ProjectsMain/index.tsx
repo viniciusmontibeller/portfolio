@@ -64,7 +64,7 @@ const ProjectsMain = () => {
                         </ProjectSkills>
                         <ProjectSource>
                             <a href='https://pokedex-59w8cvabd-viniciusmontibeller.vercel.app/' target='_blank'>
-                                Site do Projéto
+                                Site do Projeto
                                 <div></div>
                             </a>
                             <a href='https://github.com/viniciusmontibeller/pokedex' target='_blank'>
@@ -101,7 +101,7 @@ const ProjectsMain = () => {
                         </ProjectSkills>
                         <ProjectSource>
                             <a href='https://interactive-card-details-form-2cvx8pjnx-viniciusmontibeller.vercel.app/' target='_blank'>
-                                Site do Projéto
+                                Site do Projeto
                                 <div></div>
                             </a>
                             <a href='https://github.com/viniciusmontibeller/interactive-card-details-form' target='_blank'>
@@ -135,7 +135,7 @@ const ProjectsMain = () => {
                         </ProjectSkills>
                         <ProjectSource>
                             <a href='https://viniciusmontibeller.github.io/projeto-inicial-fetch-github-api/' target='_blank'>
-                                Site do Projéto
+                                Site do Projeto
                                 <div></div>
                             </a>
                             <a href='https://github.com/viniciusmontibeller/projeto-inicial-fetch-github-api' target='_blank'>
