@@ -101,6 +101,7 @@ const ImgContainer = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: inherit;
+    transition: .2s ease-in-out;
     a{
         display: block;
         line-height: 0;
@@ -115,6 +116,9 @@ const ImgContainer = styled.div`
     }
     @media(max-width: 700px){
         max-height: 15rem;
+    }
+    :hover, :focus{
+        filter: drop-shadow(0 0 4px ${props => props.theme.colors.shadow});
     }
 `
 

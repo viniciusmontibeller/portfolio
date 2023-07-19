@@ -96,6 +96,9 @@ const NavContainer = styled.div`
     display: flex;
     align-items: center;
     gap: clamp(.5rem, 2vw + .1rem, 3rem);
+    svg{
+        font-size: 1.2rem;
+    }
     a, svg{
         transition: .2s ease-in-out;
         :hover, :focus{
