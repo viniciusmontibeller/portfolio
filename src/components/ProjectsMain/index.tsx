@@ -1,9 +1,9 @@
-import pokedex from '../../assets/projects/pokedex.gif'
-import pokedexImg from '../../assets/projects/pokedex.img.png'
-import interactiveCardForm from "../../assets/projects/interactive-card-form.gif"
-import interactiveCardFormImg from "../../assets/projects/interactive-card-form.img.png"
-import fetchGithub from "../../assets/projects/fetch-github.gif"
-import fetchGithubImg from "../../assets/projects/fetch-github.img.png"
+import pokedex from '../../assets/images/projects/pokedex.gif'
+import pokedexImg from '../../assets/images/projects/pokedex.img.png'
+import interactiveCardForm from "../../assets/images/projects/interactive-card-form.gif"
+import interactiveCardFormImg from "../../assets/images/projects/interactive-card-form.img.png"
+import fetchGithub from "../../assets/images/projects/fetch-github.gif"
+import fetchGithubImg from "../../assets/images/projects/fetch-github.img.png"
 import { Main, Container, ProjectCard, ProjectsSection, ProjectInfo, ImgContainer, Info, ProjectSkills, ProjectSource } from "./style"
 import { useState, useRef, useEffect } from "react"
 
