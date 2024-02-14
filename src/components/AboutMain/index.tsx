@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Main, Info, Container, Presentation, Cta, FirstSquare, SecondSquare, About } from './style'
 import { SocialMedia } from '../SocialMedia'
-import CV from "../../assets/cv/ViniciusMontibellerCV.pdf"
+import CV from "../../assets/cv/ViniciusMontibellerDesenvolvedorFrontendReactCV.pdf"
 
 const AboutMain = () => {
     return (
@@ -20,7 +20,7 @@ const AboutMain = () => {
                         Projetos
                     </Link>
                     <a 
-                    href= {CV}
+                    href={CV}
                     download="ViniciusMontibellerDesenvolvedorFrontend">
                         Baixar CV
                     </a>
